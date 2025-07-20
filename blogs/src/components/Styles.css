@@ -1,0 +1,759 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-left .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-center .nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-center .nav-links li {
+    margin-right: 2rem;
+}
+
+.navbar-center .nav-links a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-center .nav-links a:hover {
+    color: #f1c40f; /* Gold color on hover */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .cart-icon,
+.navbar-right .user-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right .cart-icon:hover,
+.navbar-right .user-icon:hover {
+    color: #f1c40f; /* Gold color on hover */
+}
+
+/* Blog Container Styles */
+.blog-container {
+    background-color: #f1f5f5;
+    display: flex;
+    flex-wrap: wrap; /* Allow multiple rows */
+    justify-content: space-around; /* Space out items evenly */
+    padding: 3rem;
+    margin-top: 5px;
+}
+
+/* Blog Card Styles */
+.blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Ensure it takes full width on small screens */
+    max-width: 1200px; /* Add max-width to control size */
+    margin: 1rem; /* Add margin for spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+
+.blog-title {
+    font-size: 1.4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 0;
+}
+
+.blog-summary {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 1rem 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 1rem 1rem 1rem;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #f1c40f; /* Gold color on hover */
+    color: #333;
+}
+
+/* Blog Page */
+.blog-page {
+    width: 90%;  /* Fixed width on larger screens */
+    max-width: 1200px;  /* Increase the max-width for larger screen support */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    min-width: 320px;  /* Prevents collapse on small screens */
+}
+
+.blog-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog-image-full {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog-content {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Like & Dislike Buttons */
+.interaction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.like-button, .dislike-button {
+    background: #eee;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-button:hover {
+    background: #28a745;
+    color: white;
+}
+
+.dislike-button:hover {
+    background: #dc3545;
+    color: white;
+}
+
+/* Comments Section */
+.comments-section {
+    text-align: left;
+    margin-top: 25px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.comment-item {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+}
+
+.comment-item::before {
+    content: "💬";
+    font-size: 18px;
+    position: absolute;
+    left: -25px;
+    top: 8px;
+}
+
+/* Comment Form */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+.submit-comment {
+    background: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-comment:hover {
+    background: #0056b3;
+}
+
+/* Loading and Error Messages */
+.loading-message,
+.error-message {
+    font-size: 1.2rem;
+    color: #ff6347;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .blog-card {
+        width: 100%; /* Ensure the card is responsive and takes full width */
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+  
+    .blog-title {
+        font-size: 1.5rem;
+    }
+
+    .blog-content {
+        font-size: 1rem;
+    }
+
+    .back-button {
+        padding: 8px 16px;
+    }
+
+    .interaction-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .like-button, .dislike-button {
+        width: 100%; /* Make the buttons span full width on mobile */
+    }
+
+    .comment-form textarea {
+        height: 100px; /* Adjust textarea height for better readability */
+    }
+}
+
+
+
+
+.category-page {
+    text-align: center;
+    
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .categories {
+    background-color: #f1f5f5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 80px; /* Top-bottom 40px, Left-right 80px */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the grid */
+  }
+  
+  .category-card {
+    background-color: #c7caca;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  .category-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .category-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .category-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+
+
+
+
+  .comment-date {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+
+
+
+
+  .search-input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 150px;
+    transition: width 0.3s ease;
+  }
+  
+  .search-input:focus {
+    width: 150px;
+  }
+
+
+  .search-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #333;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+  }
+
+/* Title */
+.search-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .search-results-container {
+    max-width: 1200px;
+    margin: 0 auto;              /* ✅ Center the container */
+    padding: 40px 20px;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    justify-items: center;       /* ✅ Center items in each grid cell */
+  }
+  
+  
+  /* Individual blog card */
+  .blog-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;       
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Blog image */
+  .blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Blog content */
+  .blog-card-content {
+    padding: 16px;
+  }
+  
+  .blog-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .blog-card-snippet {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 12px;
+    max-height: 3.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .read-more-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .read-more-link:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+  .footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #aaa;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+
+  /* Ensure the full page takes up 100% of the viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex wrapper for full height layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Growable content area */
+.content-wrapper {
+  flex: 1;
+}
+
+
+
+
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .about-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+  }
+  
+  .about-intro {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .about-section {
+    margin-bottom: 30px;
+  }
+  
+  .about-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007BFF;
+  }
+  
+  .about-section p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .about-thanks {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-section a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .about-section a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+  .contact-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .contact-container h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+    color: #222;
+  }
+  
+  .contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .contact-container input,
+  .contact-container textarea {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+  }
+  
+  .contact-container input:focus,
+  .contact-container textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  .contact-container button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .success-msg {
+    font-size: 18px;
+    color: green;
+  }
+  
+
+
+
+/*Products page*/
+.products-container {
+  padding: 2rem;
+  background-color: #f1f5f5;
+}
+
+.products-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 2 columns */
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* makes cards equal height */
+}
+
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-title {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.buy-now-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff9900;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #e68a00;
+}
