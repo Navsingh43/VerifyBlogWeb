@@ -1,5 +1,5 @@
 [build]
-  base = "blogweb/blogs"
+  base = "BlogWeb/blogs"
   publish = "build"
   command = "npm run build"
 
